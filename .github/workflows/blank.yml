@@ -35,9 +35,9 @@ jobs:
       uses: AffineParameter/latex-action@a0.2.1
       with:
         # The root LaTeX file to be compiled
-        root_file: latex-starter/report/main.tex
+        root_file: main.tex
         # The working directory for the LaTeX engine
-        working_directory: # optional
+        working_directory: report/ # optional
         # The LaTeX engine to be invoked
         compiler: latexmk # optional, default is latexmk
         # Extra arguments to be passed to the LaTeX engine
