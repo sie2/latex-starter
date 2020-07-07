@@ -36,15 +36,15 @@ jobs:
     - name: LaTeX Render Action for Github
       uses: AffineParameter/latex-action@a0.2.1
       with:
-      # The root LaTeX file to be compiled
-      root_file: report/main.tex
-      # The working directory for the LaTeX engine
-      working_directory: report/ # optional
-      # The LaTeX engine to be invoked
-      compiler: # optional, default is latexmk
-      # Extra arguments to be passed to the LaTeX engine
-      args: # optional, default is -pdf -file-line-error -interaction=nonstopmode
-      # Install extra packages by apk
-      extra_system_packages: # optional
-      # Utilize extra local packages given a local directory
-      extra_local_packages: # optional
+        # The root LaTeX file to be compiled
+        root_file: report/main.tex
+        # The working directory for the LaTeX engine
+        working_directory: report/ # optional
+        # The LaTeX engine to be invoked
+        compiler: latexmk # optional, default is latexmk
+        # Extra arguments to be passed to the LaTeX engine
+        args: -pdf -file-line-error -interaction=nonstopmode # optional, default is -pdf -file-line-error -interaction=nonstopmode
+        # Install extra packages by apk
+        extra_system_packages: # optional
+        # Utilize extra local packages given a local directory
+        extra_local_packages: # optional
