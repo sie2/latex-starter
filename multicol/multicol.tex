@@ -1,0 +1,104 @@
+\documentclass[8pt]{extarticle}
+\usepackage[a4paper,margin=0.3in,landscape]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[explicit]{titlesec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+% theorems
+\newtheorem{thm}{Thm}
+\newtheorem{coro}{Coro}
+\newtheorem{lem}{Lem}
+
+% listings
+\lstset{language=C++,
+        basicstyle=\ttfamily,
+        keywordstyle=\color{blue}\ttfamily,
+        stringstyle=\color{red}\ttfamily,
+        commentstyle=\color{gray}\ttfamily,
+        morecomment=[l][\color{magenta}]{\#},
+        columns=fullflexible,
+        breaklines=true
+}
+
+% titlesec boxed section header
+\titleformat{\section}[hang]
+    {\LARGE\bfseries}
+    {}
+    {0em}
+    {\tikz\node[draw]{\LARGE\bfseries#1};}
+ \titleformat{\subsection}[hang]
+    {\large\bfseries}
+    {}
+    {0em}
+    {\tikz\node[draw]{\large\bfseries#1};}
+  \titleformat{\subsubsection}[hang]
+    {\bfseries}
+    {}
+    {0em}
+    {\tikz\node[draw]{\bfseries#1};}
+
+% multicol settings
+\setlength{\columnseprule}{0.4pt}
+\setlength{\parindent}{0pt}
+\raggedcolumns
+
+% enumitem settings
+\setenumerate{leftmargin=*,itemsep=0pt,topsep=0pt}
+\setitemize{leftmargin=*,itemsep=0pt,topsep=0pt}
+
+\title{Some Title Here}
+\date{}
+
+\begin{document}
+
+\begin{multicols*}{4}
+
+{\Huge{\textbf{Big Title Here \\ Second Line Here}}}
+
+\section{First Section}
+
+\begin{itemize}[leftmargin=*]
+\item 
+\begin{lstlisting}
+int main() {
+    return 0;
+}
+\end{lstlisting}
+\item \leavevmode \vspace{-1.7em}
+\begin{thm}[theorem]
+    insert theorem here
+\end{thm}
+
+\item  \leavevmode \vspace{-1.7em}         
+\begin{lem}[lemma]
+    insert lemma here
+\end{lem}
+
+\item \textbf{Test bold font}
+
+\item formula
+\[
+    \nabla F = \frac{3}{2}
+\]
+\end{itemize}
+
+
+\section{Second section}
+
+\subsection*{Subsection}
+
+\subsubsection*{Subsubsection}
+
+\end{multicols*}
+\end{document}
