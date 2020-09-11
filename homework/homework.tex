@@ -2,18 +2,22 @@
 
 \usepackage{enumitem,amsmath,amssymb,graphicx,fancyhdr,framed}
 \usepackage[margin=1in,headsep=0.2in]{geometry}
-\pagestyle{fancy}
+%\pagestyle{fancy}
 
 \begin{document}
 
-\lhead{ECE 598SG Fall 2020}
-\rhead{Emerson Sie (sie2)}
-
-
-\begin{center}
-{\Large Assignment 1}
-\end{center}
-
+\newlength{\boxwidth}
+\setlength{\boxwidth}{\textwidth}
+\addtolength{\boxwidth}{-2cm}
+\noindent\framebox[\textwidth]{
+\begin{minipage}[t]{\boxwidth}
+  {\bf ECE 598SG: Learning Based Robotics \hfill Fall 2020}  \\ [-0.3cm]
+  \begin{center} 
+    {\Large Assignment 1}
+  \end{center}
+  Emerson Sie (sie2)
+\end{minipage}}
+\vspace{0.7cm}
 
 \section*{Problem 1}
 
